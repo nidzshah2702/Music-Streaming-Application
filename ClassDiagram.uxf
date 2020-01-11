@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>715</y>
+      <w>231</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Playlist
+--
+name:string
+songs:int[]
+description:string
+
+--
+deletePlaylist(i: int): void
+updatePlaylist(i: int): void
+createPlaylist(): void
+addToPlaylist(i:int): void
+viewPlaylist(i:int): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>374</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Song
+--
+title:string
+language:string
+artists:string
+release_date:date
+
+--
+
+downloadSong(i: int): void
+viewSongs(): void
+browseSongs(query:string): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>561</x>
+      <y>55</y>
+      <w>286</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+volume:Float
+repeat:String
+queue:Song[]
+currentSongIndex:int
+
+
+--
+playSong():void
+nextSong():void
+loadSong(s:Song):void
+getQueue():Song[]
+queueSong(s:Song):void
+setRepeat(value:string):void
+getCurrentSong():Song
+setVolume(f:Float):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>396</y>
+      <w>231</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>User
+--
+name:string
+email:string
+password:string
+subscription:string
+contactno:string
+--
+deleteUser(i: int): void
+updateUser(i: int): void
+addUser(u:User): void
+viewUsers(): User[]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1155</x>
+      <y>374</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Language
+--
+languageName:string
+description:string
+--
+deleteLanguage(i: int): void
+updateLanguage(i: int): void
+addLanguage(u:User): void
+viewLanguages(): Language[]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1177</x>
+      <y>649</y>
+      <w>231</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>Album
+--
+Name:string
+Songs:int[]
+Description:string
+
+--
+DeleteAlbum(i: int): void
+UpdateAlbum(i: int): void
+CreateAlbum(): void
+ViewPlaylist(i:int): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1078</x>
+      <y>99</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Genre
+--
+genreName:string
+description:string
+permission:string
+--
+deleteGenre(i: int): void
+updateGenre(i: int): void
+addGenre(u:User): void
+viewGenres(): Genre[]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>33</x>
+      <y>220</y>
+      <w>231</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>Role
+--
+roleName:string
+description:string
+permission:string
+--
+deleteRole(i: int): void
+updateRole(i: int): void
+addRole(u:User): void
+viewRoles(): Role[]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>473</y>
+      <w>264</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+r1=follower
+m2=*
+r2=following</panel_attributes>
+    <additional_attributes>130.0;20.0;220.0;20.0;220.0;140.0;10.0;140.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>506</x>
+      <y>429</y>
+      <w>286</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=*
+likes</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>451</y>
+      <w>187</w>
+      <h>363</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+creates</panel_attributes>
+    <additional_attributes>150.0;300.0;10.0;300.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>451</y>
+      <w>132</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>451</y>
+      <w>143</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>440</y>
+      <w>132</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+has</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>506</x>
+      <y>484</y>
+      <w>286</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;290.0;170.0;290.0;170.0;10.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>528</y>
+      <w>209</w>
+      <h>253</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;200.0;170.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>286</y>
+      <w>154</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>836</x>
+      <y>198</y>
+      <w>110</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>154</y>
+      <w>143</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>979</x>
+      <y>286</y>
+      <w>33</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>979</x>
+      <y>165</y>
+      <w>121</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+belongs to</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>
